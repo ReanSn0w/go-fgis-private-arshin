@@ -13,6 +13,7 @@ import (
 	arshin "github.com/ReanSn0w/go-fgis-private-arshin/public/client"
 	"github.com/ReanSn0w/go-fgis-private-arshin/public/registries"
 	"github.com/ReanSn0w/go-fgis-private-arshin/public/registries/methods"
+	registryrecords "github.com/ReanSn0w/go-fgis-private-arshin/public/registries/records"
 )
 
 const defaultDocumentField = "foei:NameCMM"
@@ -35,37 +36,25 @@ type registryReport struct {
 }
 
 type record struct {
-	Record    recordSummary     `json:"record"`
-	Method    *methodSummary    `json:"method,omitempty"`
+	Type      string            `json:"type"`
+	Data      any               `json:"data,omitempty"`
 	Relations []relationSummary `json:"relations,omitempty"`
 	Error     string            `json:"error,omitempty"`
 }
 
 type relationSummary struct {
-	FieldName             string         `json:"fieldName,omitempty"`
-	FieldTitle            string         `json:"fieldTitle,omitempty"`
-	Type                  string         `json:"type,omitempty"`
-	RelatedRegistryNumber string         `json:"relatedRegistryNumber,omitempty"`
-	RelatedRef            *itemRef       `json:"relatedRef,omitempty"`
-	Record                *recordSummary `json:"record,omitempty"`
-	Method                *methodSummary `json:"method,omitempty"`
-	Error                 string         `json:"error,omitempty"`
+	FieldName             string        `json:"fieldName,omitempty"`
+	FieldTitle            string        `json:"fieldTitle,omitempty"`
+	Type                  string        `json:"type,omitempty"`
+	RelatedRegistryNumber string        `json:"relatedRegistryNumber,omitempty"`
+	RelatedRef            *itemRef      `json:"relatedRef,omitempty"`
+	Record                *typedSummary `json:"record,omitempty"`
+	Error                 string        `json:"error,omitempty"`
 }
 
-type recordSummary struct {
-	ID          string          `json:"id"`
-	RegistryID  string          `json:"registryId,omitempty"`
-	Type        string          `json:"type,omitempty"`
-	DisplayName string          `json:"displayName,omitempty"`
-	Properties  []propertyValue `json:"properties,omitempty"`
-	Documents   []document      `json:"documents,omitempty"`
-}
-
-type propertyValue struct {
-	Name  string `json:"name"`
-	Title string `json:"title,omitempty"`
-	Type  string `json:"type,omitempty"`
-	Value any    `json:"value,omitempty"`
+type typedSummary struct {
+	Kind string `json:"type"`
+	Data any    `json:"data"`
 }
 
 type methodSummary struct {
@@ -222,9 +211,10 @@ func findRegistryDocumentRelations(ctx context.Context, client *arshin.Client, r
 }
 
 func buildRecord(ctx context.Context, client *arshin.Client, registryID arshin.RegistryID, source arshin.RegistryRecord) record {
+	typed := summarizeOutputRecord(registryID, source)
 	result := record{
-		Record: summarizeRecord(registryID, source.ID, source.Type, source.Properties),
-		Method: summarizeMethodIfSupported(registryID, source),
+		Type: typed.Kind,
+		Data: typed.Data,
 	}
 
 	detailedItem, err := client.GetRegistryItem(ctx, registryID, arshin.RegistryItemID(source.ID))
@@ -233,8 +223,9 @@ func buildRecord(ctx context.Context, client *arshin.Client, registryID arshin.R
 		return result
 	}
 
-	result.Record = summarizeRecord(registryID, source.ID, source.Type, detailedItem.Fields())
-	result.Method = summarizeMethodItemIfSupported(registryID, *detailedItem)
+	typed = summarizeOutputItem(registryID, *detailedItem)
+	result.Type = typed.Kind
+	result.Data = typed.Data
 	result.Relations = resolveRelations(ctx, client, detailedItem.Fields())
 	return result
 }
@@ -289,52 +280,184 @@ func resolveRef(ctx context.Context, client *arshin.Client, property arshin.Regi
 		return summary
 	}
 
-	summary.Record = ptr(summarizeRecord(ref.RegistryID, string(ref.ItemID), "", relatedItem.Fields()))
-	summary.Method = summarizeMethodItemIfSupported(ref.RegistryID, *relatedItem)
+	summary.Record = summarizeOutputItem(ref.RegistryID, *relatedItem)
 	return summary
 }
 
-func summarizeMethodIfSupported(registryID arshin.RegistryID, record arshin.RegistryRecord) *methodSummary {
-	if !methods.IsSupportedRegistry(registryID) {
-		return nil
+func summarizeOutputRecord(registryID arshin.RegistryID, record arshin.RegistryRecord) *typedSummary {
+	if methods.IsSupportedRegistry(registryID) {
+		return makeTyped("Method", summarizeMethod(methods.MapRecord(record)))
 	}
-	return ptr(summarizeMethod(methods.MapRecord(record)))
+	return summarizeTypedRecord(registryrecords.MapRecord(registryID, record))
 }
 
-func summarizeMethodItemIfSupported(registryID arshin.RegistryID, item arshin.RegistryItem) *methodSummary {
-	if !methods.IsSupportedRegistry(registryID) {
-		return nil
+func summarizeOutputItem(registryID arshin.RegistryID, item arshin.RegistryItem) *typedSummary {
+	if methods.IsSupportedRegistry(registryID) {
+		return makeTyped("Method", summarizeMethod(methods.MapItem(item)))
 	}
-	return ptr(summarizeMethod(methods.MapItem(item)))
+	return summarizeTypedRecord(registryrecords.MapItem(item))
 }
 
-func summarizeRecord(registryID arshin.RegistryID, id string, recordType string, properties []arshin.RegistryProperty) recordSummary {
-	if recordType == "" {
-		if spec, ok := registries.SpecForRegistry(registryID); ok {
-			recordType = spec.ItemType
-		}
+func summarizeTypedRecord(record registryrecords.Record) *typedSummary {
+	if record == nil {
+		return nil
 	}
 
-	summary := recordSummary{
-		ID:         id,
-		RegistryID: string(registryID),
-		Type:       recordType,
-		Properties: summarizeProperties(properties),
-		Documents:  summarizePropertyAttachments(properties),
+	switch typed := record.(type) {
+	case registryrecords.NormativeDocument:
+		return makeTyped("NormativeDocument", map[string]any{
+			"base":         summarizeBase(typed.BaseRecord()),
+			"kind":         typed.Kind,
+			"number":       typed.Number,
+			"acceptedAt":   typed.AcceptedAt,
+			"organization": typed.Organization,
+			"name":         typed.Name,
+			"edition":      typed.Edition,
+			"status":       typed.Status,
+			"documents":    summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.CalibrationMarkCipher:
+		return makeTyped("CalibrationMarkCipher", map[string]any{
+			"base":                  summarizeBase(typed.BaseRecord()),
+			"code":                  typed.Code,
+			"organizationName":      typed.OrganizationName,
+			"registrationAuthority": typed.RegistrationAuthority,
+			"documents":             summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.GSIStandard:
+		return makeTyped("GSIStandard", map[string]any{
+			"base":         summarizeBase(typed.BaseRecord()),
+			"documentType": typed.DocumentType,
+			"number":       typed.Number,
+			"name":         typed.Name,
+			"introducedAt": typed.IntroducedAt,
+			"status":       typed.Status,
+			"documents":    summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.InternationalTreaty:
+		return makeTyped("InternationalTreaty", map[string]any{
+			"base":               summarizeBase(typed.BaseRecord()),
+			"typeAndDesignation": typed.TypeAndDesignation,
+			"date":               typed.Date,
+			"venue":              typed.Venue,
+			"organization":       typed.Organization,
+			"name":               typed.Name,
+			"documents":          summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.InternationalComparison:
+		return makeTyped("InternationalComparison", map[string]any{
+			"base":           summarizeBase(typed.BaseRecord()),
+			"standardRefs":   summarizeItemRefs(typed.StandardRefs),
+			"code":           typed.Code,
+			"comparisonType": typed.ComparisonType,
+			"description":    typed.Description,
+			"measuredValue":  typed.MeasuredValue,
+			"years":          typed.Years,
+			"documents":      summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.ReferenceData:
+		return makeTyped("ReferenceData", map[string]any{
+			"base":             summarizeBase(typed.BaseRecord()),
+			"number":           typed.Number,
+			"name":             typed.Name,
+			"storage":          typed.Storage,
+			"developmentState": typed.DevelopmentState,
+			"status":           typed.Status,
+			"documents":        summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.StandardUnit:
+		return makeTyped("StandardUnit", map[string]any{
+			"base":           summarizeBase(typed.BaseRecord()),
+			"registryNumber": typed.RegistryNumber,
+			"name":           typed.Name,
+			"orderNumber":    typed.OrderNumber,
+			"orderDate":      typed.OrderDate,
+			"documents":      summarizeAttachments(typed.Documents),
+			"relations":      summarizeItemRefs(typed.Relations),
+		})
+	case registryrecords.PrimaryStandard:
+		return makeTyped("PrimaryStandard", map[string]any{
+			"base":              summarizeBase(typed.BaseRecord()),
+			"registryNumber":    typed.RegistryNumber,
+			"standardName":      typed.StandardName,
+			"instituteRefs":     summarizeItemRefs(typed.InstituteRefs),
+			"approvalYear":      typed.ApprovalYear,
+			"certificationYear": typed.CertificationYear,
+			"status":            typed.Status,
+			"documents":         summarizeAttachments(typed.Documents),
+			"relations":         summarizeItemRefs(typed.Relations),
+		})
+	case registryrecords.InternationalDocument:
+		return makeTyped("InternationalDocument", map[string]any{
+			"base":                summarizeBase(typed.BaseRecord()),
+			"number":              typed.Number,
+			"russianName":         typed.RussianName,
+			"russianOrganization": typed.RussianOrganization,
+			"russianDocuments":    summarizeAttachments(typed.RussianDocuments),
+			"englishDocuments":    summarizeAttachments(typed.EnglishDocuments),
+			"documents":           summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.TechnicalInstrumentClassification:
+		return makeTyped("TechnicalInstrumentClassification", map[string]any{
+			"base":         summarizeBase(typed.BaseRecord()),
+			"documentType": typed.DocumentType,
+			"number":       typed.Number,
+			"date":         typed.Date,
+			"name":         typed.Name,
+			"status":       typed.Status,
+			"documents":    summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.RegulatedMeasurementList:
+		return makeTyped("RegulatedMeasurementList", map[string]any{
+			"base":      summarizeBase(typed.BaseRecord()),
+			"documents": summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.StandardSampleType:
+		return makeTyped("StandardSampleType", map[string]any{
+			"base":                    summarizeBase(typed.BaseRecord()),
+			"registryNumber":          typed.RegistryNumber,
+			"name":                    typed.Name,
+			"certifiedCharacteristic": typed.CertifiedCharacteristic,
+			"expiration":              typed.Expiration,
+			"productionRefs":          summarizeItemRefs(typed.ProductionRefs),
+			"documents":               summarizeAttachments(typed.Documents),
+			"relations":               summarizeItemRefs(typed.Relations),
+		})
+	case registryrecords.ProductionNotice:
+		return makeTyped("ProductionNotice", map[string]any{
+			"base":                     summarizeBase(typed.BaseRecord()),
+			"registrationDate":         typed.RegistrationDate,
+			"registrationNumber":       typed.RegistrationNumber,
+			"organizationFullName":     typed.OrganizationFullName,
+			"organizationINN":          typed.OrganizationINN,
+			"organizationLegalAddress": typed.OrganizationLegalAddress,
+			"documents":                summarizeAttachments(typed.Documents),
+		})
+	case registryrecords.GenericRecord:
+		return makeTyped("GenericRecord", map[string]any{
+			"base":      summarizeBase(typed.BaseRecord()),
+			"documents": summarizeAttachments(typed.Documents),
+			"relations": summarizeItemRefs(typed.Relations),
+		})
+	default:
+		base := record.BaseRecord()
+		return makeTyped("Record", map[string]any{
+			"base": summarizeBase(base),
+		})
 	}
-	summary.DisplayName = firstStringProperty(properties, []string{
-		"foei:NameCMM",
-		"foei:NameND",
-		"foei:NameGSI",
-		"foei:NameMdg",
-		"foei:NameMD",
-		"foei:NameSI",
-		"foei:NameSO",
-		"foei:FullName",
-		"foei:name",
-		"cm:name",
-	})
-	return summary
+}
+
+func makeTyped(kind string, data any) *typedSummary {
+	return &typedSummary{Kind: kind, Data: data}
+}
+
+func summarizeBase(base registryrecords.Base) map[string]any {
+	return map[string]any{
+		"id":            base.ID,
+		"type":          base.Type,
+		"registryId":    string(base.RegistryID),
+		"registryTitle": base.RegistryTitle,
+	}
 }
 
 func summarizeMethod(method *methods.Method) methodSummary {
@@ -396,43 +519,16 @@ func summarizeAttachments(attachments []arshin.AttachmentRef) []document {
 	return result
 }
 
-func summarizeProperties(properties []arshin.RegistryProperty) []propertyValue {
-	result := make([]propertyValue, 0, len(properties))
-	for _, property := range properties {
-		if property.Value == nil {
-			continue
-		}
-		result = append(result, propertyValue{
-			Name:  property.Name,
-			Title: property.Title,
-			Type:  property.Type,
-			Value: property.Value,
+func summarizeItemRefs(refs []arshin.RegistryItemRef) []itemRef {
+	result := make([]itemRef, 0, len(refs))
+	for _, ref := range refs {
+		result = append(result, itemRef{
+			RegistryID: string(ref.RegistryID),
+			ItemID:     string(ref.ItemID),
+			Link:       ref.Link,
 		})
 	}
 	return result
-}
-
-func summarizePropertyAttachments(properties []arshin.RegistryProperty) []document {
-	var result []document
-	for _, property := range properties {
-		result = append(result, summarizeAttachments(property.Attachments())...)
-	}
-	return result
-}
-
-func firstStringProperty(properties []arshin.RegistryProperty, names []string) string {
-	index := arshin.PropertiesByName(properties)
-	for _, name := range names {
-		if value := stringProperty(index, name); value != "" {
-			return value
-		}
-	}
-	for _, property := range properties {
-		if value, ok := property.Value.(string); ok && value != "" {
-			return value
-		}
-	}
-	return ""
 }
 
 func stringProperty(properties map[string]arshin.RegistryProperty, name string) string {
@@ -465,10 +561,6 @@ func writeJSON(path string, value any) error {
 	encoder.SetEscapeHTML(false)
 	encoder.SetIndent("", "  ")
 	return encoder.Encode(value)
-}
-
-func ptr[T any](value T) *T {
-	return &value
 }
 
 func exit(err error) {

@@ -23,6 +23,7 @@ Go-библиотека для работы с приватным web API сай
 - generic helpers для `ATTACH`, `LINK_INTERNAL` и `CHILD_OBJECT` полей.
 - live-проверка session/header/cookie поведения в `docs/research/registry-session-security.md`.
 - typed-исследование семейства реестров методик измерений в `docs/research/typed-methods.md`.
+- typed-модели display-полей для остальных известных web-реестров в пакете `public/registries/records`.
 
 ## Generic usage
 
@@ -137,12 +138,36 @@ import (
 primary, err := methods.NewForSpec(client, registries.CMM2)
 ```
 
-Для реестров без typed-адаптера используется generic API и тот же каталог:
+Если нужен полный raw/generic API, используется общий клиент и тот же каталог:
 
 ```go
 specs := registries.Known()
 standardUnits := registries.SU   // registry 11
 standardSamples := registries.UTSO // registry 19
+```
+
+## Known registry typed records
+
+Для остальных известных разделов есть пакет `public/registries/records`.
+Он позволяет создать typed-клиент с заранее объявленным типом результата:
+`List` и `Get` сразу возвращают подготовленные структуры, а raw-данные остаются
+доступны в Go через `RawProperties`, `RawRecord` и `RawItem`, но не попадают в
+JSON по умолчанию.
+
+```go
+units := records.NewTypedClient(client, records.StandardUnits)
+
+page, err := units.List(ctx, arshinclient.RegistryQuery{
+    PageNumber: 1,
+    PageSize:   20,
+})
+if err != nil {
+    return err
+}
+
+unit := page.Items[0] // records.StandardUnit
+_ = unit.RegistryNumber
+_ = unit.RawProperties
 ```
 
 ## Examples
