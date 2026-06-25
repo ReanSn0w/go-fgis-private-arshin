@@ -1,0 +1,181 @@
+{
+  "generatedAt": "2026-06-25T09:13:31.53972Z",
+  "checks": [
+    {
+      "name": "first_page_registry_16",
+      "registryId": "16",
+      "ok": true,
+      "totalCount": 52635,
+      "currentPage": 1,
+      "pageSize": 3,
+      "itemCount": 3,
+      "recordTypes": [
+        "foei:CMM1_type"
+      ],
+      "firstId": "1430402",
+      "firstNumber": "54152",
+      "valuesNil": true
+    },
+    {
+      "name": "pagination_registry_16_page_2",
+      "registryId": "16",
+      "ok": true,
+      "totalCount": 52635,
+      "currentPage": 2,
+      "pageSize": 3,
+      "itemCount": 3,
+      "recordTypes": [
+        "foei:CMM1_type"
+      ],
+      "firstId": "1430355",
+      "firstNumber": "54122",
+      "valuesNil": true
+    },
+    {
+      "name": "empty_filter_registry_16",
+      "registryId": "16",
+      "ok": true,
+      "currentPage": 1,
+      "pageSize": 3
+    },
+    {
+      "name": "single_filter_registry_16",
+      "registryId": "16",
+      "ok": true,
+      "totalCount": 1,
+      "currentPage": 1,
+      "pageSize": 3,
+      "itemCount": 1,
+      "recordTypes": [
+        "foei:CMM1_type"
+      ],
+      "firstId": "1404476",
+      "firstNumber": "44733",
+      "valuesNil": true
+    },
+    {
+      "name": "multiple_filters_registry_16",
+      "registryId": "16",
+      "ok": true,
+      "totalCount": 1,
+      "currentPage": 1,
+      "pageSize": 3,
+      "itemCount": 1,
+      "recordTypes": [
+        "foei:CMM1_type"
+      ],
+      "firstId": "1404476",
+      "firstNumber": "44733",
+      "valuesNil": true
+    },
+    {
+      "name": "sort_asc_registry_16",
+      "registryId": "16",
+      "ok": true,
+      "totalCount": 52635,
+      "currentPage": 1,
+      "pageSize": 3,
+      "itemCount": 3,
+      "recordTypes": [
+        "foei:CMM1_type"
+      ],
+      "firstId": "273736",
+      "firstNumber": "25826",
+      "valuesNil": true
+    },
+    {
+      "name": "sort_desc_registry_16",
+      "registryId": "16",
+      "ok": true,
+      "totalCount": 52635,
+      "currentPage": 1,
+      "pageSize": 3,
+      "itemCount": 3,
+      "recordTypes": [
+        "foei:CMM1_type"
+      ],
+      "firstId": "302490",
+      "valuesNil": true
+    },
+    {
+      "name": "larger_page_size_registry_16",
+      "registryId": "16",
+      "ok": true,
+      "totalCount": 52635,
+      "currentPage": 1,
+      "pageSize": 100,
+      "itemCount": 100,
+      "recordTypes": [
+        "foei:CMM1_type"
+      ],
+      "firstId": "1430402",
+      "firstNumber": "54152",
+      "valuesNil": true
+    },
+    {
+      "name": "large_page_size_500_registry_16",
+      "registryId": "16",
+      "ok": true,
+      "totalCount": 52635,
+      "currentPage": 1,
+      "pageSize": 500,
+      "itemCount": 500,
+      "recordTypes": [
+        "foei:CMM1_type"
+      ],
+      "firstId": "1430402",
+      "firstNumber": "54152",
+      "valuesNil": true
+    },
+    {
+      "name": "small_registry_18",
+      "registryId": "18",
+      "ok": true,
+      "totalCount": 1,
+      "currentPage": 1,
+      "pageSize": 10,
+      "itemCount": 1,
+      "recordTypes": [
+        "foei:EPI_type"
+      ],
+      "firstId": "493452",
+      "valuesNil": true
+    },
+    {
+      "name": "largest_registry_11",
+      "registryId": "11",
+      "ok": true,
+      "totalCount": 117537,
+      "currentPage": 1,
+      "pageSize": 3,
+      "itemCount": 3,
+      "recordTypes": [
+        "foei:SU_type"
+      ],
+      "firstId": "1430363",
+      "firstNumber": "196230",
+      "valuesNil": true
+    },
+    {
+      "name": "registry_47_namespace",
+      "registryId": "47",
+      "ok": true,
+      "totalCount": 4878,
+      "currentPage": 1,
+      "pageSize": 3,
+      "itemCount": 3,
+      "recordTypes": [
+        "gost:p1wfRequestType4"
+      ],
+      "firstId": "500262",
+      "valuesNil": true
+    },
+    {
+      "name": "invalid_registry",
+      "registryId": "999999",
+      "ok": true,
+      "error": "arshin: unexpected HTTP status 500 Internal Server Error",
+      "note": "Expected failure for invalid registry id."
+    }
+  ]
+}

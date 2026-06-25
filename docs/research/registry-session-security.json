@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-06-25T09:36:02.31115Z",
+  "checks": [
+    {
+      "name": "data_plain_no_browser_headers_no_cookie",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/api/registry/16/data?pageNumber=1\u0026pageSize=1\u0026orgID=CURRENT_ORG\u0026filterBy=foei%3ANumRegCMM\u0026filterValues=%D0%A4%D0%A0.1.31.2022.44733",
+      "statusCode": 200,
+      "contentType": "application/json;charset=UTF-8",
+      "contentLength": -1,
+      "bodyPrefix": "{\n  \"status\" : 200,\n  \"result\" : {\n    \"totalCount\" : 1,\n    \"currentPage\" : 1,\n    \"pageSize\" : 1,\n    \"items\" : [ {\n      \"values\" : null,\n      \"properties\" : [ {\n        \"name\" : \"foei:NumCertValCMM\",\n        \"type\" : \"text\",\n        \"multiple\" : false,\n        \"title\" : \"№ свидетельства об аттестации\",\n        \"constraint\" : null,\n        \"value\" : \"88-16207-048-RA.RU.310657-2022\",\n        \"longValue\" : null,\n        \"link\" : null,\n        \"mime\" : null\n      }, {\n        \"na",
+      "setCookieNames": [
+        "session-cookie"
+      ],
+      "looksLikeJson": true
+    },
+    {
+      "name": "data_browser_headers_no_cookie",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/api/registry/16/data?pageNumber=1\u0026pageSize=1\u0026orgID=CURRENT_ORG\u0026filterBy=foei%3ANumRegCMM\u0026filterValues=%D0%A4%D0%A0.1.31.2022.44733",
+      "statusCode": 200,
+      "contentType": "application/json;charset=UTF-8",
+      "contentLength": -1,
+      "bodyPrefix": "{\n  \"status\" : 200,\n  \"result\" : {\n    \"totalCount\" : 1,\n    \"currentPage\" : 1,\n    \"pageSize\" : 1,\n    \"items\" : [ {\n      \"values\" : null,\n      \"properties\" : [ {\n        \"name\" : \"foei:NumCertValCMM\",\n        \"type\" : \"text\",\n        \"multiple\" : false,\n        \"title\" : \"№ свидетельства об аттестации\",\n        \"constraint\" : null,\n        \"value\" : \"88-16207-048-RA.RU.310657-2022\",\n        \"longValue\" : null,\n        \"link\" : null,\n        \"mime\" : null\n      }, {\n        \"na",
+      "setCookieNames": [
+        "session-cookie"
+      ],
+      "looksLikeJson": true
+    },
+    {
+      "name": "registry_page_preflight_sets_cookie_and_token",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/registry/16",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": -1,
+      "bodyPrefix": "\u003c!DOCTYPE html\u003e\n\u003chtml xmlns=\"http://www.w3.org/1999/html\"\u003e\n\u003chead\u003e\u003cmeta name='hmac-token-name' content='Ajax-Token'/\u003e\n\n    \u003cmeta charset=\"utf-8\"\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e\n    \u003cmeta name=\"keywords\" content=\"Федеральный информационный фонд по обеспечению единства измерений\" /\u003e\n    \u003ctitle\u003eФедеральный информационный фон\ufffd",
+      "setCookieNames": [
+        "session-cookie"
+      ],
+      "cookieNamesAfter": [
+        "session-cookie"
+      ],
+      "ajaxTokenName": "Ajax-Token",
+      "looksLikeHtml": true
+    },
+    {
+      "name": "data_after_preflight_cookie",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/api/registry/16/data?pageNumber=1\u0026pageSize=1\u0026orgID=CURRENT_ORG\u0026filterBy=foei%3ANumRegCMM\u0026filterValues=%D0%A4%D0%A0.1.31.2022.44733",
+      "statusCode": 200,
+      "contentType": "application/json;charset=UTF-8",
+      "contentLength": -1,
+      "bodyPrefix": "{\n  \"status\" : 200,\n  \"result\" : {\n    \"totalCount\" : 1,\n    \"currentPage\" : 1,\n    \"pageSize\" : 1,\n    \"items\" : [ {\n      \"values\" : null,\n      \"properties\" : [ {\n        \"name\" : \"foei:NumCertValCMM\",\n        \"type\" : \"text\",\n        \"multiple\" : false,\n        \"title\" : \"№ свидетельства об аттестации\",\n        \"constraint\" : null,\n        \"value\" : \"88-16207-048-RA.RU.310657-2022\",\n        \"longValue\" : null,\n        \"link\" : null,\n        \"mime\" : null\n      }, {\n        \"na",
+      "cookieNamesAfter": [
+        "session-cookie"
+      ],
+      "looksLikeJson": true
+    },
+    {
+      "name": "data_after_preflight_cookie_with_ajax_token_header",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/api/registry/16/data?pageNumber=1\u0026pageSize=1\u0026orgID=CURRENT_ORG\u0026filterBy=foei%3ANumRegCMM\u0026filterValues=%D0%A4%D0%A0.1.31.2022.44733",
+      "statusCode": 200,
+      "contentType": "application/json;charset=UTF-8",
+      "contentLength": -1,
+      "bodyPrefix": "{\n  \"status\" : 200,\n  \"result\" : {\n    \"totalCount\" : 1,\n    \"currentPage\" : 1,\n    \"pageSize\" : 1,\n    \"items\" : [ {\n      \"values\" : null,\n      \"properties\" : [ {\n        \"name\" : \"foei:NumCertValCMM\",\n        \"type\" : \"text\",\n        \"multiple\" : false,\n        \"title\" : \"№ свидетельства об аттестации\",\n        \"constraint\" : null,\n        \"value\" : \"88-16207-048-RA.RU.310657-2022\",\n        \"longValue\" : null,\n        \"link\" : null,\n        \"mime\" : null\n      }, {\n        \"na",
+      "cookieNamesAfter": [
+        "session-cookie"
+      ],
+      "looksLikeJson": true
+    },
+    {
+      "name": "item_after_preflight_cookie",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/api/registry/16/items/1404476/data",
+      "statusCode": 200,
+      "contentType": "application/json;charset=UTF-8",
+      "contentLength": -1,
+      "bodyPrefix": "{\n  \"status\" : 200,\n  \"result\" : {\n    \"id\" : 1404476,\n    \"alfrescoId\" : \"a0354c6b-d1ad-4c0d-adab-3d26f34e8f46\",\n    \"registryId\" : 16,\n    \"registryTitle\" : null,\n    \"deleted\" : false,\n    \"sections\" : [ {\n      \"sectionTitle\" : \"Аттестующая организация\",\n      \"fields\" : [ {\n        \"name\" : \"foei:CertifOrgCMM\",\n        \"type\" : \"LINK_INTERNAL\",\n        \"multiple\" : false,\n        \"title\" : \"Аттестующая организация\",\n        \"constraint\" : null,\n        \"value",
+      "cookieNamesAfter": [
+        "session-cookie"
+      ],
+      "looksLikeJson": true
+    },
+    {
+      "name": "download_after_preflight_cookie",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/api/downloadfile/c11f089b-22f4-4d66-87cd-7aff99909001",
+      "statusCode": 200,
+      "contentType": "application/octet-stream",
+      "contentLength": 101187,
+      "cookieNamesAfter": [
+        "session-cookie"
+      ]
+    },
+    {
+      "name": "invalid_registry_json_error",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/api/registry/999999/data?pageNumber=1\u0026pageSize=1\u0026orgID=CURRENT_ORG",
+      "statusCode": 500,
+      "contentType": "application/json;charset=UTF-8",
+      "contentLength": -1,
+      "bodyPrefix": "{\n  \"status\" : 404,\n  \"result\" : null,\n  \"message\" : \"not found\",\n  \"trace\" : \"com.innerman.utils.RstdException: not found\\n\\tat com.innerman.service.base.RegistryService.getRegistryItems(RegistryService.java:313)\\n\\tat com.innerman.service.base.RegistryService$$FastClassBySpringCGLIB$$f83d97d1.invoke(\u003cgenerated\u003e)\\n\\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)\\n",
+      "setCookieNames": [
+        "session-cookie"
+      ],
+      "looksLikeJson": true
+    },
+    {
+      "name": "html_page_when_json_expected",
+      "method": "GET",
+      "url": "https://fgis.gost.ru/fundmetrology/registry/16",
+      "statusCode": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": -1,
+      "bodyPrefix": "\u003c!DOCTYPE html\u003e\n\u003chtml xmlns=\"http://www.w3.org/1999/html\"\u003e\n\u003chead\u003e\u003cmeta name='hmac-token-name' content='Ajax-Token'/\u003e\n\n    \u003cmeta charset=\"utf-8\"\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\u003e\n    \u003cmeta name=\"keywords\" content=\"Федеральный информационный фонд по обеспечению единства измерений\" /\u003e\n    \u003ctitle\u003eФедеральный информационный фон\ufffd",
+      "setCookieNames": [
+        "session-cookie"
+      ],
+      "ajaxTokenName": "Ajax-Token",
+      "looksLikeHtml": true
+    }
+  ]
+}

@@ -1,0 +1,2133 @@
+[
+  {
+    "registryId": "1",
+    "title": "Нормативные правовые акты Российской Федерации",
+    "ok": true,
+    "totalCount": 104,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:ND_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:AdditionallyND",
+        "title": "Дополнительно",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:DataND",
+        "title": "Дата принятия",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DocND",
+        "title": "Нормативный правовой акт",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:EditionND",
+        "title": "Редакция",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameND",
+        "title": "Наименование",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberND",
+        "title": "Номер",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:OrgND",
+        "title": "Принявший орган",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusND",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeND",
+        "title": "Вид",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "2",
+    "title": "Шифры калибровочных клейм",
+    "ok": true,
+    "totalCount": 783,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:SCM_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:AddressOrganizationSCM",
+        "title": "Адрес организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:DateCertRegRCKSCM",
+        "title": "Срок действия свидетельства о регистрации в РСК",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DocCertRCKSCM",
+        "title": "Свидетельство о регистрации в РСК",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:ManualEntrySCM",
+        "title": "Заполнять данные организации вручную",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameOrgSCM",
+        "title": "Наименование организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumCertRegRCKSCM",
+        "title": "Номер свидетельства о регистрации в РСК",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:RegSCM",
+        "title": "Орган регистрации",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:SCM",
+        "title": "Шифр калибровочного клейма",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "3",
+    "title": "Стандарты государственной системы обеспечения единства измерений",
+    "ok": true,
+    "totalCount": 514,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:GSI_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:DateGSI",
+        "title": "Дата введения",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameGSI",
+        "title": "Наименование",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberGSI",
+        "title": "Номер",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusGSI",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeGSI",
+        "title": "Вид документа",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "6",
+    "title": "Первичные референтные методики (методы) измерений",
+    "ok": true,
+    "totalCount": 17,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:CMM2_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:AdrCerOrgCMM",
+        "title": "Адрес аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:AdrDevMetdCMM",
+        "title": "Адрес разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:AppointmentCMM",
+        "title": "Назначение методики",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:CertifOrgCMM",
+        "title": "Аттестующая организация",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:DataCertCMM",
+        "title": "Дата свидетельства об аттестации",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DataOrderMetCMM",
+        "title": "Дата приказа",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DevMetdCMM",
+        "title": "Разработчик МВИ",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:DocOrderMetCMM",
+        "title": "Приказ",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:ErrorCharactCMM",
+        "title": "Характеристика погрешности",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MailDevMetdCMM",
+        "title": "E-mail разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MailOrganizationCMM",
+        "title": "E-mail аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ManualEntryCMM",
+        "title": "Заполнить данные организации вручную",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:MeasuredVarCMM",
+        "title": "Измеряемая величина",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MetodMeasuCMM",
+        "title": "Метод измерений",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameCMM",
+        "title": "Наименование документа на методику",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameCerOrgCMM",
+        "title": "Наименование аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameDevMetdCMM",
+        "title": "Наименование разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumCertValCMM",
+        "title": "№ свидетельства об аттестации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumRegCMM",
+        "title": "Номер в реестре",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberCertificateCMM",
+        "title": "Номер аттестата аккредитации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberOrderMetCMM",
+        "title": "Номер приказа",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:RangeMeasuCMM",
+        "title": "Пределы измерений",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:SFCMM",
+        "title": "Раздел реестра",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:StatusCMM",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TelDevMetdCMM",
+        "title": "Телефон разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TelOrganizationCMM",
+        "title": "Телефон аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeMeasuCMM",
+        "title": "Вид измерений",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:TypeMetCMM",
+        "title": "Вид методики",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "7",
+    "title": "Международные договоры",
+    "ok": true,
+    "totalCount": 12,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:MDG_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:DateMDG",
+        "title": "Дата",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DocMDG",
+        "title": "Документ",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:NameMDG",
+        "title": "Наименование",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:OrganizationMDG",
+        "title": "Организация",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusMDG",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeMDG",
+        "title": "Тип и обозначение",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:VenueMDG",
+        "title": "Место",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "8",
+    "title": "Референтные методики (методы) измерений",
+    "ok": true,
+    "totalCount": 7,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:CMM3_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:AdrCerOrgCMM",
+        "title": "Адрес аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:AdrDevMetdCMM",
+        "title": "Адрес разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:AppointmentCMM",
+        "title": "Назначение методики",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:CertifOrgCMM",
+        "title": "Аттестующая организация",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:DataCertCMM",
+        "title": "Дата свидетельства об аттестации",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DataRefOrderMetCMM",
+        "title": "Дата приказа",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DevMetdCMM",
+        "title": "Разработчик МВИ",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:DocRefOrderMetCMM",
+        "title": "Приказ",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:ECDocCMM",
+        "title": "Характеристика погрешности",
+        "type": "ATTACH",
+        "multiple": true,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:ErrorCharactCMM",
+        "title": "Характеристика погрешности",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MailDevMetdCMM",
+        "title": "E-mail разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MailOrganizationCMM",
+        "title": "E-mail аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ManualEntryCMM",
+        "title": "Заполнить данные организации вручную",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:MeasuredVarCMM",
+        "title": "Измеряемая величина",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MetodMeasuCMM",
+        "title": "Метод измерений",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameCMM",
+        "title": "Наименование документа на методику",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameCerOrgCMM",
+        "title": "Наименование аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameDevMetdCMM",
+        "title": "Наименование разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumCertValCMM",
+        "title": "№ свидетельства об аттестации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumRegCMM",
+        "title": "Номер в реестре",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberCertificateCMM",
+        "title": "Номер аттестата аккредитации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberRefOrderMetCMM",
+        "title": "Номер приказа",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:RMDocCMM",
+        "title": "Пределы измерений",
+        "type": "ATTACH",
+        "multiple": true,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:RangeMeasuCMM",
+        "title": "Пределы измерений",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:SFCMM",
+        "title": "Раздел реестра",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:StatusCMM",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TelDevMetdCMM",
+        "title": "Телефон разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TelOrganizationCMM",
+        "title": "Телефон аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeMeasuCMM",
+        "title": "Вид измерений",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:TypeMetCMM",
+        "title": "Вид методики",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "9",
+    "title": "Международные сличения",
+    "ok": true,
+    "totalCount": 437,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:IC_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:AdvisorCommitIC",
+        "title": "Консультативный Комитет",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:AreaMetrIC",
+        "title": "Метрологическая область",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:CodeIC",
+        "title": "Код сличения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:DescriptionIC",
+        "title": "Описание",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:HeldIC",
+        "title": "Контролер сличения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:IC1_assoc",
+        "title": "Участники",
+        "type": "CHILD_OBJECT",
+        "multiple": true,
+        "hasLink": true
+      },
+      {
+        "name": "foei:MeasuredValueIC",
+        "title": "Измерение",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ParametrIC",
+        "title": "Параметры",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusCompIC",
+        "title": "Статус сличения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TransmissionDeviceIC",
+        "title": "Устройство передачи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeIC",
+        "title": "Тип сличения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "10",
+    "title": "Информация и данные ГСССД",
+    "ok": true,
+    "totalCount": 483,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:SSD_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:DocSSD",
+        "title": "Документ ССД",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:NameSSD",
+        "title": "Наименование таблиц ССД",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberPagesSSD",
+        "title": "Количество страниц",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberSSD",
+        "title": "Номер таблиц ССД",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StateDevSSD",
+        "title": "Состояние разработки",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusSSD",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:StorageSSD",
+        "title": "Место хранения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "11",
+    "title": "Эталоны единиц величин",
+    "ok": true,
+    "totalCount": 117537,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:SU_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:ApplicationNumberSU",
+        "title": "Номер приложения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:CategorySU",
+        "title": "Статус или разряд (уровень) эталона по государственной или локальной поверочной схеме",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:DataOrderSU",
+        "title": "Дата регистрации приказа",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:FormOwnerSU",
+        "title": "Форма собственности (государственный или принадлежащий указанной организации)",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:LocalSchemSU",
+        "title": "Наличие локальной поверочной схемы",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:MInterSU",
+        "title": "Межаттестационный интервал (месяцы)",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:ManualEntrySU",
+        "title": "Заполнять данные организации вручную",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameSU",
+        "title": "Наименование эталона",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumRegSU",
+        "title": "Номер эталона в государственном реестре",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumbOrderPunSU",
+        "title": "Номер пункта приказа",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberOrderSU",
+        "title": "Номер приказа",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberSU",
+        "title": "Номер эталона единицы величины по порядку, присвоенный организацией-держателем эталона (внутренний номер)",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:RegFirstNumberSU",
+        "title": "Регистрационный(ые) номер(а) государственного первичного эталона, к которому осуществляют прослеживаемость эталона",
+        "type": "LINK_INTERNAL",
+        "multiple": true,
+        "hasLink": true
+      },
+      {
+        "name": "foei:SU3_assoc",
+        "title": "Сведения о периодической аттестации эталона",
+        "type": "CHILD_OBJECT",
+        "multiple": true,
+        "hasLink": true
+      },
+      {
+        "name": "foei:StatusSU",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeSU",
+        "title": "Тип владельца/держателя эталона",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:UpdateSU",
+        "title": "Требуется обновить сведения",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "12",
+    "title": "Государственные первичные эталоны Российской Федерации",
+    "ok": true,
+    "totalCount": 221,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:GPS_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:AccumulatedDepreciationGPS",
+        "title": "Начисленная амортизация (износ)",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:AppAreaGPS",
+        "title": "Область применения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:AverageCostServiceGPS",
+        "title": "Средняя стоимость обслуживания в год, руб.",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:CompRefGPS",
+        "title": "Состав эталона",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:DataResolAppovGPS",
+        "title": "Дата приказа",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DepreciationGPS",
+        "title": "Норма амортизации (износа), %",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:DescriptionGPS",
+        "title": "Описание",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:EmGPS",
+        "title": "E-mail",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ICompariGPS",
+        "title": "Международные сличения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:InfStdMeasurCapGPS",
+        "title": "Сведения об опубликования данных об измерительных возможностях эталона",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:InstGuardGPS",
+        "title": "Институт-хранитель",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:MServGPS",
+        "title": "Метрологический сервис",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MarkEvalPlayBUnitGPS",
+        "title": "Оценка случайной погрешности воспроизведения единиц",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MarkEvalSysErrGPS",
+        "title": "Оценка неисключённой систематической погрешности воспроизведения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MetCreateGPS",
+        "title": "Способ создания",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MonMezhattInterGPS",
+        "title": "Межаттестационный интервал (месяцев)",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameResolAppovGPS",
+        "title": "Наименование приказа",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameStandGPS",
+        "title": "Наименование стандарта",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NominRangeGPS",
+        "title": "Номинальные значения, диапазон",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumRegGPS",
+        "title": "Номер по реестру",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:OriginalCostGPS",
+        "title": "Первоначальная (восстановительная) стоимость, руб. (с учетом переоценки на 01.01.2003)",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:PhoneGPS",
+        "title": "Телефон",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:PlanRegulCompariGPS",
+        "title": "Планируемые, очередные сличения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ProdOrgGPS",
+        "title": "Организация изготовитель",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:PublicatGPS",
+        "title": "Публикации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:RomStandGPS",
+        "title": "Номер стандарта",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ScientistGPS",
+        "title": "ФИО",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StandNameGPS",
+        "title": "Наименование эталона",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StandUncerAGPS",
+        "title": "Стандартная неопределённость, оценённая по типу A",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StandUncerBGPS",
+        "title": "Стандартная неопределённость, оценённая по типу B",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StandUncerK2GPS",
+        "title": "Расширенная неопределённость при коэффициенте охвата k=2",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StandUncerSumGPS",
+        "title": "Суммарная стандартная неопределённость",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusGPS",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TechDocGPS",
+        "title": "Наличие технической и иной документации на ГЭ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ThechCondGPS",
+        "title": "Техническое состояние и способ использования",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeMeasurGPS",
+        "title": "Вид измерения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TyperGPS",
+        "title": "Вид эталона",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:YearApprovGPS",
+        "title": "Год утверждения (переутверждения)",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:YearCertifGPS",
+        "title": "Год последней аттестации",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:YearMezhattInterGPS",
+        "title": "Межаттестационный интервал (лет)",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:YearOrigManufGPS",
+        "title": "Год выпуска",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "14",
+    "title": "Международные документы",
+    "ok": true,
+    "totalCount": 198,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:MD_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:DocEngMD",
+        "title": "Документ на английском",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:DocRusMD",
+        "title": "Документ на русском",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:EditionMD",
+        "title": "Год редакции",
+        "type": "number",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameEngMD",
+        "title": "Наименование",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameOrgMD",
+        "title": "Наименование организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameRusMD",
+        "title": "Наименование",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberMD",
+        "title": "Номер",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:OrgEngMD",
+        "title": "Организация",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:OrgRusMD",
+        "title": "Организация",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusMD",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeDocMD",
+        "title": "Вид документа",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "16",
+    "title": "Аттестованные методики (методы) измерений",
+    "ok": true,
+    "totalCount": 52635,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:CMM1_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:AdrCerOrgCMM",
+        "title": "Адрес аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:AdrDevMetdCMM",
+        "title": "Адрес разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:AppointmentCMM",
+        "title": "Назначение методики",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:CertifOrgCMM",
+        "title": "Аттестующая организация",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:DataCertCMM",
+        "title": "Дата свидетельства об аттестации",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DevMetdCMM",
+        "title": "Разработчик МВИ",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:ECDocCMM",
+        "title": "Характеристика погрешности",
+        "type": "ATTACH",
+        "multiple": true,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:ErrorCharactCMM",
+        "title": "Характеристика погрешности",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MailDevMetdCMM",
+        "title": "E-mail разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MailOrganizationCMM",
+        "title": "E-mail аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ManualEntryCMM",
+        "title": "Заполнить данные организации вручную",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:MeasuredVarCMM",
+        "title": "Измеряемая величина",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:MetodMeasuCMM",
+        "title": "Метод измерений",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameCMM",
+        "title": "Наименование документа на методику",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameCerOrgCMM",
+        "title": "Наименование аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameDevMetdCMM",
+        "title": "Наименование разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumCertValCMM",
+        "title": "№ свидетельства об аттестации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumRegCMM",
+        "title": "Номер в реестре",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberCertificateCMM",
+        "title": "Номер аттестата аккредитации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:RMDocCMM",
+        "title": "Пределы измерений",
+        "type": "ATTACH",
+        "multiple": true,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:RangeMeasuCMM",
+        "title": "Пределы измерений",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:SFCMM",
+        "title": "Раздел реестра",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:StatusCMM",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TelDevMetdCMM",
+        "title": "Телефон разработчика МВИ",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TelOrganizationCMM",
+        "title": "Телефон аттестующей организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeMeasuCMM",
+        "title": "Вид измерений",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:TypeMetCMM",
+        "title": "Вид методики",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "17",
+    "title": "Сведения об отнесении технических средств к средствам измерений",
+    "ok": true,
+    "totalCount": 1742,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:TSSI_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:DateTSSI",
+        "title": "Дата",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DocTSSI",
+        "title": "Документ",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:NameTSSI",
+        "title": "Наименование технического средства",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberTSSI",
+        "title": "Номер",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusTSSI",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:TypeTSSI",
+        "title": "Вид документа",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "18",
+    "title": "Перечень измерений, относящихся к сфере государственного регулирования",
+    "ok": true,
+    "totalCount": 1,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:EPI_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:EPI",
+        "title": "Перечень измерений, относящихся к сфере государственного регулирования",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "19",
+    "title": "Утвержденные типы стандартных образцов",
+    "ok": true,
+    "totalCount": 11268,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "foei:UTSO_type"
+    ],
+    "properties": [
+      {
+        "name": "foei:DataSertUTSO",
+        "title": "Срок свидетельства",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:DocUTSO",
+        "title": "Описание типа",
+        "type": "ATTACH",
+        "multiple": false,
+        "hasLink": true,
+        "hasMime": true
+      },
+      {
+        "name": "foei:EstabCertValUTSO",
+        "title": "Способ установления аттестованного значения",
+        "type": "LINK_INTERNAL",
+        "multiple": true,
+        "hasLink": true
+      },
+      {
+        "name": "foei:ExpDateUTSO",
+        "title": "Срок годности",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:IsDataSertUTSO",
+        "title": "Срок действия свидетельства ограничен",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameCertCharUTSO",
+        "title": "Наименование аттестованной характеристики",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NameUTSO",
+        "title": "Наименование СО",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumSertUTSO",
+        "title": "Номер свидетельства",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:NumberUTSO",
+        "title": "Номер в Госреестре СО",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:ProductionUTSO",
+        "title": "Производство",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "foei:ShortDesSiUTSO",
+        "title": "Краткое описание СО",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:StatusUTSO",
+        "title": "Статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "foei:UTSO1_assoc",
+        "title": "Страна и производитель",
+        "type": "CHILD_OBJECT",
+        "multiple": true,
+        "hasLink": true
+      },
+      {
+        "name": "foei:date",
+        "title": "Дата опубликования",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "foei:number",
+        "title": "Номер записи",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:sortKey",
+        "title": "",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "foei:status",
+        "title": "Системный статус",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  },
+  {
+    "registryId": "47",
+    "title": "Уведомления об осуществлении деятельности по производству эталонов единиц величин, стандартных образцов и средств измерений",
+    "ok": true,
+    "totalCount": 4878,
+    "currentPage": 1,
+    "pageSize": 2,
+    "recordTypes": [
+      "gost:p1wfRequestType4"
+    ],
+    "properties": [
+      {
+        "name": "gost:guwfRequestStatus",
+        "title": "Статус рассмотрения",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfActAddrUS",
+        "title": "Фактический адрес организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfCNameUS",
+        "title": "Фирменное наименование организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfFNameUS",
+        "title": "Полное наименование организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfINNUS",
+        "title": "ИНН",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfIncomingDate",
+        "title": "Дата входящего на бумажном носителе",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfIncomingNumber",
+        "title": "Номер входящего на бумажном носителе",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfLegalAddrUS",
+        "title": "Юридический адрес организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfManualEntryN",
+        "title": "Заполнить данные уведомителя вручную",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfOGRNUS",
+        "title": "ОГРН",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfOrgType",
+        "title": "Тип уведомителя",
+        "type": "LIST",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfOrgTypeUS",
+        "title": "Организационно-правовая форма",
+        "type": "LINK_INTERNAL",
+        "multiple": false,
+        "hasLink": true
+      },
+      {
+        "name": "gost:p1wfOrganizationFullName",
+        "title": "Наименование уведомителя",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfOrganizationINN",
+        "title": "ИНН уведомителя",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfPostAddrUS",
+        "title": "Почтовый адрес",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:p1wfRequestType4Data",
+        "title": "Виды деятельности и выполняемые в их составе работы (услуги)",
+        "type": "CHILD_OBJECT",
+        "multiple": true,
+        "hasLink": true
+      },
+      {
+        "name": "gost:p1wfShortNameUS",
+        "title": "Сокращенное наименование организации",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "gost:registrationDate",
+        "title": "Дата регистрации",
+        "type": "date",
+        "multiple": false
+      },
+      {
+        "name": "gost:registrationNumber",
+        "title": "Регистрационный номер",
+        "type": "text",
+        "multiple": false
+      },
+      {
+        "name": "id",
+        "title": "ID",
+        "type": "id",
+        "multiple": false
+      }
+    ]
+  }
+]

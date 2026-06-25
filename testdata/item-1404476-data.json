@@ -1,0 +1,376 @@
+{
+  "id": 1404476,
+  "alfrescoId": "a0354c6b-d1ad-4c0d-adab-3d26f34e8f46",
+  "registryId": 16,
+  "registryTitle": "",
+  "deleted": false,
+  "sections": [
+    {
+      "sectionTitle": "Аттестующая организация",
+      "fields": [
+        {
+          "name": "foei:CertifOrgCMM",
+          "type": "LINK_INTERNAL",
+          "multiple": false,
+          "title": "Аттестующая организация",
+          "constraint": null,
+          "value": "АХУ УРО РАН",
+          "longValue": null,
+          "link": "/registry/13/items/394779",
+          "mime": null
+        },
+        {
+          "name": "foei:NameCerOrgCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Наименование аттестующей организации",
+          "constraint": null,
+          "value": "АХУ УРО РАН",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:NumberCertificateCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Номер аттестата аккредитации",
+          "constraint": null,
+          "value": "-",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:AdrCerOrgCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Адрес аттестующей организации",
+          "constraint": null,
+          "value": "620990, ОБЛАСТЬ СВЕРДЛОВСКАЯ, ГОРОД ЕКАТЕРИНБУРГ, УЛИЦА ПЕРВОМАЙСКАЯ, дом 91",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:TelOrganizationCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Телефон аттестующей организации",
+          "constraint": null,
+          "value": "+7(343)3744454",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:MailOrganizationCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "E-mail аттестующей организации",
+          "constraint": null,
+          "value": "ahu-priem@mail.ru",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Сведения о разработчике МВИ",
+      "fields": [
+        {
+          "name": "foei:DevMetdCMM",
+          "type": "LINK_INTERNAL",
+          "multiple": false,
+          "title": "Разработчик МВИ",
+          "constraint": null,
+          "value": "ФГБУ «Федеральный центр анализа и оценки техногенного воздействия» (ФГБУ «ФЦАО»)",
+          "longValue": null,
+          "link": "/registry/20/items/272627",
+          "mime": null
+        },
+        {
+          "name": "foei:NameDevMetdCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Наименование разработчика МВИ",
+          "constraint": null,
+          "value": "ФГБУ «Федеральный центр анализа и оценки техногенного воздействия» (ФГБУ «ФЦАО»)",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:AdrDevMetdCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Адрес разработчика МВИ",
+          "constraint": null,
+          "value": "117105, Москва, Варшавское шоссе, д. 39А",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:TelDevMetdCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Телефон разработчика МВИ",
+          "constraint": null,
+          "value": "(495) 229-50-38, факс:(495) 943-29-44",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Сведения об аттестованной методике (методе) измерений",
+      "fields": [
+        {
+          "name": "foei:NumRegCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Номер в реестре",
+          "constraint": null,
+          "value": "ФР.1.31.2022.44733",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:SFCMM",
+          "type": "LINK_INTERNAL",
+          "multiple": false,
+          "title": "Раздел реестра",
+          "constraint": null,
+          "value": "Вне сферы обороны",
+          "longValue": null,
+          "link": "/registry/23/items/239512",
+          "mime": null
+        },
+        {
+          "name": "foei:TypeMetCMM",
+          "type": "LIST",
+          "multiple": false,
+          "title": "Вид методики",
+          "constraint": "foei:TypeMetCMM_list",
+          "value": "Методика (метод) измерений",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:AppointmentCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Назначение методики",
+          "constraint": null,
+          "value": "для использования в лабораториях, осуществляющих количественную оценку содержания меди в растворённой и валовой формах в пробах питьевых, природных и сточных вод при проведении измерений ",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:NameCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Наименование документа на методику",
+          "constraint": null,
+          "value": "ПНД Ф 14.1:2:3:4.48-2022 (издание 2022 г.) «Количественный химический анализ вод. Методика измерений массовой концентрации ионов меди в пробах питьевых, горячих и сточных вод, а также в пробах природных (поверхностных и подземных) водных объектов фотометрическим методом с диэтилдитиокарбаматом свинца»",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:NumCertValCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "№ свидетельства об аттестации",
+          "constraint": null,
+          "value": "88-16207-048-RA.RU.310657-2022",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:DataCertCMM",
+          "type": "date",
+          "multiple": false,
+          "title": "Дата свидетельства об аттестации",
+          "constraint": null,
+          "value": "31.10.2022",
+          "longValue": "31.10.2022",
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:TypeMeasuCMM",
+          "type": "LINK_INTERNAL",
+          "multiple": false,
+          "title": "Вид измерений",
+          "constraint": null,
+          "value": "Физико-химические измерения",
+          "longValue": null,
+          "link": "/registry/45/items/269711",
+          "mime": null
+        },
+        {
+          "name": "foei:MetodMeasuCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Метод измерений",
+          "constraint": null,
+          "value": "фотометрический",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:MeasuredVarCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Измеряемая величина",
+          "constraint": null,
+          "value": "массовая концентрация, мг/дм3",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:RangeMeasuCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Пределы измерений",
+          "constraint": null,
+          "value": "См. приложение",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:RMDocCMM",
+          "type": "ATTACH",
+          "multiple": true,
+          "title": "Пределы измерений",
+          "constraint": null,
+          "value": [
+            "ПРИЛОЖЕНИЕ_048.pdf"
+          ],
+          "longValue": null,
+          "link": [
+            "/api/downloadfile/c11f089b-22f4-4d66-87cd-7aff99909001"
+          ],
+          "mime": "application/pdf"
+        },
+        {
+          "name": "foei:ErrorCharactCMM",
+          "type": "text",
+          "multiple": false,
+          "title": "Характеристика погрешности",
+          "constraint": null,
+          "value": "См. приложение",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:StatusCMM",
+          "type": "LIST",
+          "multiple": false,
+          "title": "Статус",
+          "constraint": "foei:ObjectStatus_list",
+          "value": "Действует",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Вложения",
+      "fields": []
+    },
+    {
+      "sectionTitle": "Общие сведения",
+      "fields": [
+        {
+          "name": "foei:CMM1Relation_assoc",
+          "type": "CHILD_OBJECT",
+          "multiple": true,
+          "title": "Связи",
+          "constraint": null,
+          "value": [
+            {
+              "columns": [
+                {
+                  "name": "foei:RelationTypeCMM",
+                  "title": "Тип связи"
+                },
+                {
+                  "name": "foei:RelatedCMM",
+                  "title": "Связанная методика"
+                }
+              ],
+              "fields": [
+                {
+                  "constraint": "foei:RelationTypeCMM_list",
+                  "link": null,
+                  "longValue": null,
+                  "mime": null,
+                  "multiple": false,
+                  "name": "foei:RelationTypeCMM",
+                  "title": "Тип связи",
+                  "type": "LIST",
+                  "value": "Заменяет"
+                },
+                {
+                  "constraint": null,
+                  "link": "/registry/16/items/286196",
+                  "longValue": null,
+                  "mime": null,
+                  "multiple": false,
+                  "name": "foei:RelatedCMM",
+                  "title": "Связанная методика",
+                  "type": "LINK_INTERNAL",
+                  "value": "ФР.1.31.2013.16016"
+                }
+              ],
+              "id": "72ab88e3-d085-4227-b493-478d6094238e",
+              "nodeRef": "workspace://SpacesStore/72ab88e3-d085-4227-b493-478d6094238e",
+              "type": "foei:CMM1Relation"
+            }
+          ],
+          "longValue": null,
+          "link": [
+            null
+          ],
+          "mime": null
+        },
+        {
+          "name": "foei:number",
+          "type": "text",
+          "multiple": false,
+          "title": "Номер записи",
+          "constraint": null,
+          "value": "44733",
+          "longValue": null,
+          "link": null,
+          "mime": null
+        },
+        {
+          "name": "foei:date",
+          "type": "date",
+          "multiple": false,
+          "title": "Дата опубликования",
+          "constraint": null,
+          "value": "15.12.2022",
+          "longValue": "15.12.2022",
+          "link": null,
+          "mime": null
+        }
+      ]
+    }
+  ]
+}

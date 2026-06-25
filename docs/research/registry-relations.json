@@ -1,0 +1,129 @@
+[
+  {
+    "fieldName": "foei:CertifOrgCMM",
+    "fieldTitle": "Аттестующая организация",
+    "fieldType": "LINK_INTERNAL",
+    "value": "АХУ УРО РАН",
+    "refs": [
+      {
+        "registryId": "13",
+        "itemId": "394779",
+        "link": "/registry/13/items/394779"
+      }
+    ]
+  },
+  {
+    "fieldName": "foei:DevMetdCMM",
+    "fieldTitle": "Разработчик МВИ",
+    "fieldType": "LINK_INTERNAL",
+    "value": "ФГБУ «Федеральный центр анализа и оценки техногенного воздействия» (ФГБУ «ФЦАО»)",
+    "refs": [
+      {
+        "registryId": "20",
+        "itemId": "272627",
+        "link": "/registry/20/items/272627"
+      }
+    ]
+  },
+  {
+    "fieldName": "foei:SFCMM",
+    "fieldTitle": "Раздел реестра",
+    "fieldType": "LINK_INTERNAL",
+    "value": "Вне сферы обороны",
+    "refs": [
+      {
+        "registryId": "23",
+        "itemId": "239512",
+        "link": "/registry/23/items/239512"
+      }
+    ]
+  },
+  {
+    "fieldName": "foei:TypeMeasuCMM",
+    "fieldTitle": "Вид измерений",
+    "fieldType": "LINK_INTERNAL",
+    "value": "Физико-химические измерения",
+    "refs": [
+      {
+        "registryId": "45",
+        "itemId": "269711",
+        "link": "/registry/45/items/269711"
+      }
+    ]
+  },
+  {
+    "fieldName": "foei:CMM1Relation_assoc",
+    "fieldTitle": "Связи",
+    "fieldType": "CHILD_OBJECT",
+    "value": [
+      {
+        "columns": [
+          {
+            "name": "foei:RelationTypeCMM",
+            "title": "Тип связи"
+          },
+          {
+            "name": "foei:RelatedCMM",
+            "title": "Связанная методика"
+          }
+        ],
+        "fields": [
+          {
+            "constraint": "foei:RelationTypeCMM_list",
+            "link": null,
+            "longValue": null,
+            "mime": null,
+            "multiple": false,
+            "name": "foei:RelationTypeCMM",
+            "title": "Тип связи",
+            "type": "LIST",
+            "value": "Заменяет"
+          },
+          {
+            "constraint": null,
+            "link": "/registry/16/items/286196",
+            "longValue": null,
+            "mime": null,
+            "multiple": false,
+            "name": "foei:RelatedCMM",
+            "title": "Связанная методика",
+            "type": "LINK_INTERNAL",
+            "value": "ФР.1.31.2013.16016"
+          }
+        ],
+        "id": "72ab88e3-d085-4227-b493-478d6094238e",
+        "nodeRef": "workspace://SpacesStore/72ab88e3-d085-4227-b493-478d6094238e",
+        "type": "foei:CMM1Relation"
+      }
+    ],
+    "childObjects": [
+      {
+        "id": "72ab88e3-d085-4227-b493-478d6094238e",
+        "type": "foei:CMM1Relation",
+        "nodeRef": "workspace://SpacesStore/72ab88e3-d085-4227-b493-478d6094238e",
+        "refs": [
+          {
+            "registryId": "16",
+            "itemId": "286196",
+            "link": "/registry/16/items/286196"
+          }
+        ],
+        "fields": [
+          {
+            "name": "foei:RelatedCMM",
+            "title": "Связанная методика",
+            "type": "LINK_INTERNAL",
+            "multiple": false,
+            "hasLink": true
+          },
+          {
+            "name": "foei:RelationTypeCMM",
+            "title": "Тип связи",
+            "type": "LIST",
+            "multiple": false
+          }
+        ]
+      }
+    ]
+  }
+]
